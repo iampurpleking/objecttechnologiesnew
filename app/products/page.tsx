@@ -1,3 +1,7 @@
+"use client";
+
+import Footer from '../../components/Footer';
+
 export default function Products() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-8">
@@ -5,6 +9,7 @@ export default function Products() {
       <p className="max-w-2xl text-center text-lg font-poppins text-brand-black/80">
         Discover our range of products designed to empower your business and streamline your operations.
       </p>
+      <Footer />
     </main>
   );
 }
