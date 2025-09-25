@@ -81,7 +81,7 @@ export default function Testimonials() {
   };
 
   return (
-    <main className="min-h-screen bg-brand-white text-brand-black">
+    <main className="min-h-screen bg-brand-white text-brand-black px-2 md:px-0">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white">
         <div className="container-max text-center">
@@ -115,7 +115,7 @@ export default function Testimonials() {
             <p className="text-section-subtitle">Real feedback from real businesses</p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="card card-hover">
                 {/* Header */}

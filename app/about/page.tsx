@@ -3,9 +3,9 @@ import Footer from '../../components/Footer';
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-brand-white text-brand-black">
+  <main className="min-h-screen bg-brand-white text-brand-black px-2 md:px-0">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white">
+  <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white px-2 md:px-0">
         <div className="container-max text-center">
           <h1 className="text-hero text-brand-white mb-6">About Object Technologies</h1>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
@@ -16,9 +16,9 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section-padding">
+      <section className="section-padding px-2 md:px-0">
         <div className="container-max">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-8">
               <div className="card">
                 <h2 className="text-section-title text-brand-orange mb-4">Our Mission</h2>
@@ -52,7 +52,7 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="section-padding bg-brand-gray-50">
+      <section className="section-padding bg-brand-gray-50 px-2 md:px-0">
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-section-title text-brand-orange">Our Story</h2>

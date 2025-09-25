@@ -16,9 +16,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-brand-white text-brand-black flex flex-col items-center justify-center p-0">
+  <main className="min-h-screen bg-brand-white text-brand-black flex flex-col items-center justify-center p-0">
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center bg-black overflow-hidden p-0 m-0" data-aos="fade-up">
+  <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center bg-black overflow-hidden p-0 m-0">
         {/* Hero Image */}
         <img 
           src="/heropics.png" 
@@ -28,10 +28,10 @@ export default function Home() {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         
-        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 md:px-8 max-w-6xl mx-auto">
+  <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 md:px-8 max-w-6xl mx-auto">
           {/* Main Hero Content */}
           <div className="animate-fade-in-up">
-            <h1 className="text-hero text-brand-white mb-6 leading-tight drop-shadow-2xl flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
+            <h1 className="text-3xl md:text-hero text-brand-white mb-6 leading-tight drop-shadow-2xl flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
               <span role="img" aria-label="Rocket" className="text-4xl md:text-6xl animate-bounce-slow">🚀</span>
               <span className="text-center">
                 Empowering Businesses with 
@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           
           <div className="animate-fade-in-up animate-delay-200">
-            <p className="text-lg md:text-2xl max-w-4xl font-inter mb-10 text-brand-white/90 leading-relaxed">
+            <p className="text-base md:text-2xl max-w-4xl font-inter mb-10 text-brand-white/90 leading-relaxed px-2 md:px-0">
               At Object Technologies, we merge creativity, technology, and strategy to deliver cutting-edge 
               <span className="text-brand-orange font-semibold"> digital marketing solutions</span> and 
               <span className="text-brand-orange font-semibold"> software products</span> that help your business thrive in today's fast-moving world.
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           
           {/* Stats or Trust Indicators */}
-          <div className="animate-fade-in-up animate-delay-300 mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-3xl">
+          <div className="animate-fade-in-up animate-delay-300 mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-3xl px-2 md:px-0">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-brand-orange mb-2">50+</div>
               <div className="text-brand-white/80 font-medium">Projects Delivered</div>
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
         
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-brand-white/50 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-brand-white/70 rounded-full mt-2 animate-pulse"></div>
           </div>
@@ -96,13 +96,13 @@ export default function Home() {
       </section>
 
       {/* About Us */}
-      <section className="section-padding container-max" id="about" data-aos="fade-up" data-aos-delay="100">
+  <section className="section-padding container-max px-2 md:px-0" id="about" data-aos="fade-up" data-aos-delay="100">
         <div className="text-center mb-12">
           <h2 className="text-section-title text-brand-orange">About Us</h2>
           <p className="text-section-subtitle">Your trusted partner in digital transformation</p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6">
             <div className="card">
               <h3 className="text-xl font-bold text-brand-orange mb-3 font-poppins">Who We Are</h3>
@@ -149,14 +149,14 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-brand-gray-50" id="services" data-aos="fade-up" data-aos-delay="200">
+  <section className="section-padding bg-brand-gray-50 px-2 md:px-0" id="services" data-aos="fade-up" data-aos-delay="200">
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-section-title text-brand-orange">Our Services & Projects</h2>
             <p className="text-section-subtitle">Comprehensive digital solutions for your business growth</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <div className="card card-hover">
               <div className="text-4xl mb-4">💻</div>
               <h3 className="text-xl font-bold text-brand-orange mb-3 font-poppins">Web Development</h3>
@@ -193,7 +193,7 @@ export default function Home() {
           
           <div className="card bg-brand-orange/5 border-l-4 border-brand-orange">
             <h3 className="text-xl font-bold text-brand-orange mb-4 font-poppins">Featured Success Stories</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
                 <strong className="text-brand-black">E-commerce Platform</strong>
                 <p className="text-brand-gray-600">300% increase in online sales for retail brand</p>
@@ -212,13 +212,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding container-max" id="testimonials" data-aos="fade-up" data-aos-delay="300">
+  <section className="section-padding container-max px-2 md:px-0" id="testimonials" data-aos="fade-up" data-aos-delay="300">
         <div className="text-center mb-12">
           <h2 className="text-section-title text-brand-orange">What Our Clients Say</h2>
           <p className="text-section-subtitle">Real results from real businesses</p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="card">
             <div className="text-brand-orange text-2xl mb-4">"</div>
             <p className="text-brand-gray-700 mb-4 italic">
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* Call-to-Action Section */}
-      <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white" id="contact" data-aos="fade-up" data-aos-delay="400">
+  <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white px-2 md:px-0" id="contact" data-aos="fade-up" data-aos-delay="400">
         <div className="container-max text-center">
           <h2 className="text-section-title text-brand-white mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -282,6 +282,135 @@ export default function Home() {
             </a>
             <a href="#services" className="btn-outline border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-orange">
               Learn More About Our Services
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Blog Posts */}
+      <section className="section-padding bg-brand-gray-50 px-2 md:px-0">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="text-section-title text-brand-orange">Latest Insights</h2>
+            <p className="text-section-subtitle">Stay updated with the latest trends and best practices in technology</p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Blog Post 1 */}
+            <article className="card card-hover">
+              <div className="aspect-video bg-brand-orange/10 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">📝</div>
+                  <p className="text-brand-gray-600 text-sm">Next.js Guide</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-2 mb-3">
+                <span className="px-3 py-1 bg-brand-orange/10 text-brand-orange text-sm rounded-full">
+                  Web Development
+                </span>
+                <span className="text-brand-gray-500 text-sm">8 min read</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-brand-black mb-3 line-clamp-2">
+                <a href="/blog/nextjs-best-practices-2024" className="hover:text-brand-orange">
+                  Next.js Best Practices for 2024
+                </a>
+              </h3>
+              
+              <p className="text-brand-gray-700 mb-4 line-clamp-3">
+                Discover the latest techniques and patterns for building high-performance Next.js applications.
+              </p>
+              
+              <div className="flex items-center justify-between text-sm text-brand-gray-500">
+                <span>Sep 20, 2024</span>
+                <a 
+                  href="/blog/nextjs-best-practices-2024"
+                  className="text-brand-orange hover:text-brand-orange/80 font-semibold"
+                >
+                  Read More →
+                </a>
+              </div>
+            </article>
+
+            {/* Blog Post 2 */}
+            <article className="card card-hover">
+              <div className="aspect-video bg-brand-orange/10 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">⚛️</div>
+                  <p className="text-brand-gray-600 text-sm">React Architecture</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-2 mb-3">
+                <span className="px-3 py-1 bg-brand-orange/10 text-brand-orange text-sm rounded-full">
+                  React
+                </span>
+                <span className="text-brand-gray-500 text-sm">12 min read</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-brand-black mb-3 line-clamp-2">
+                <a href="/blog/building-scalable-react-applications" className="hover:text-brand-orange">
+                  Building Scalable React Applications
+                </a>
+              </h3>
+              
+              <p className="text-brand-gray-700 mb-4 line-clamp-3">
+                Learn how to architect React applications that can grow with your business needs.
+              </p>
+              
+              <div className="flex items-center justify-between text-sm text-brand-gray-500">
+                <span>Sep 15, 2024</span>
+                <a 
+                  href="/blog/building-scalable-react-applications"
+                  className="text-brand-orange hover:text-brand-orange/80 font-semibold"
+                >
+                  Read More →
+                </a>
+              </div>
+            </article>
+
+            {/* Blog Post 3 */}
+            <article className="card card-hover">
+              <div className="aspect-video bg-brand-orange/10 rounded-lg mb-4 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-3xl mb-2">🌍</div>
+                  <p className="text-brand-gray-600 text-sm">Tech in Africa</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-2 mb-3">
+                <span className="px-3 py-1 bg-brand-orange/10 text-brand-orange text-sm rounded-full">
+                  Industry
+                </span>
+                <span className="text-brand-gray-500 text-sm">6 min read</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-brand-black mb-3 line-clamp-2">
+                <a href="/blog/future-web-development-africa" className="hover:text-brand-orange">
+                  The Future of Web Development in Africa
+                </a>
+              </h3>
+              
+              <p className="text-brand-gray-700 mb-4 line-clamp-3">
+                Exploring the growing tech landscape across Africa and opportunities for web developers.
+              </p>
+              
+              <div className="flex items-center justify-between text-sm text-brand-gray-500">
+                <span>Sep 10, 2024</span>
+                <a 
+                  href="/blog/future-web-development-africa"
+                  className="text-brand-orange hover:text-brand-orange/80 font-semibold"
+                >
+                  Read More →
+                </a>
+              </div>
+            </article>
+          </div>
+          
+          <div className="text-center mt-12">
+            <a href="/blog" className="btn-primary">
+              View All Articles
             </a>
           </div>
         </div>

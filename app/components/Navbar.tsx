@@ -8,6 +8,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Services", href: "/#services" },
+  { name: "Blog", href: "/blog" },
   { name: "Testimonials", href: "/testimonials" },
   { name: "Products", href: "/products" },
 ];
@@ -43,7 +44,7 @@ export default function Navbar() {
             <img 
               src="/logo.svg" 
               alt="Object Technologies Logo" 
-              className="h-10 w-10 object-contain transform group-hover:scale-110 transition-transform duration-300" 
+              className="h-10 w-10 object-contain transform group-hover:scale-110 transition-transform duration-300 md:ml-0 ml-2" 
             />
           </div>
           <div className="hidden md:block">
@@ -106,6 +107,10 @@ export default function Navbar() {
       } overflow-hidden`}>
         <div className="bg-brand-white border-t border-brand-orange/10 px-4 pb-6">
           <div className="flex flex-col gap-4 mt-4">
+            {/* Logo on mobile menu */}
+            <div className="flex items-center justify-center mb-2">
+              <img src="/logo.svg" alt="Logo" className="h-10 w-10 object-contain ml-2" />
+            </div>
             {navLinks.map(link => (
               <Link 
                 key={link.name} 

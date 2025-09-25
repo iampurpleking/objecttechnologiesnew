@@ -2,8 +2,8 @@ import Footer from "../../components/Footer";
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-brand-white text-brand-black">
-      <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white">
+  <main className="min-h-screen bg-brand-white text-brand-black px-2 md:px-0">
+  <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white px-2 md:px-0">
         <div className="container-max text-center">
           <h1 className="text-hero text-brand-white mb-6">Our Projects Portfolio</h1>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
@@ -12,14 +12,14 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-padding px-2 md:px-0">
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-section-title text-brand-orange">Featured Projects</h2>
             <p className="text-section-subtitle">Success stories that showcase our expertise</p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             <div className="card">
               <h3 className="text-2xl font-bold text-brand-orange mb-3">TechMart Nigeria</h3>
               <p className="text-brand-gray-700 mb-4">
@@ -43,7 +43,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white">
+      <section className="section-padding bg-gradient-to-r from-brand-orange to-brand-orange-light text-brand-white px-2 md:px-0">
         <div className="container-max text-center">
           <h2 className="text-section-title text-brand-white mb-4">Ready to Start Your Project?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

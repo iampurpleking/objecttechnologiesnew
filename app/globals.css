@@ -49,6 +49,22 @@
   
   /* Card styles */
   .card {
+    @apply bg-brand-white p-6 rounded-xl shadow-brand border border-brand-gray-100 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-brand-lg hover:-translate-y-1;
+  }
+  
+  /* Progress bar styles */
+  .progress-bar {
+    @apply w-full bg-brand-gray-200 rounded-full h-2;
+  }
+  
+  .progress-fill {
+    @apply bg-brand-orange h-2 rounded-full transition-all duration-300;
+  }
+  .card {
     @apply bg-brand-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6;
   }
   

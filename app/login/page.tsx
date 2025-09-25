@@ -16,12 +16,31 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    setLoading(false);
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
+      setLoading(false);
       setError(error.message);
+      return;
+    }
+
+    // Check if user is admin
+    const userId = data?.user?.id;
+    if (userId) {
+      const { data: adminUser, error: adminError } = await supabase
+        .from('admin_users')
+        .select('*')
+        .eq('user_id', userId)
+        .single();
+      console.log('Admin user query result:', { adminUser, adminError, userId });
+      setLoading(false);
+      if (adminUser) {
+        router.push('/admin');
+      } else {
+        router.push('/dashboard');
+      }
     } else {
-      router.push('/dashboard');
+      setLoading(false);
+      setError('Could not get user ID after login.');
     }
   };
 
