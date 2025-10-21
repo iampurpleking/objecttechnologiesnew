@@ -5,7 +5,10 @@ import { useSearchParams } from "next/navigation";
 
 export default function GetStartedPage() {
   const searchParams = useSearchParams();
-  const [mode, setMode] =useState(searchParams.get('mode') || "login");
+  const [mode, setMode] = useState<"login" | "register" | "reset-password">(
+    (searchParams.get("mode") as "login" | "register" | "reset-password") ||
+      "login",
+  );
   const redirectTo = searchParams.get("redirectTo") || "/dashboard";
 
   return (
