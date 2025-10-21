@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Footer from '../../../components/Footer';
+import { createClient } from '@supabase/supabase-js';
 
 // Sample blog posts data - this would come from Supabase in production
 const blogPosts = [
@@ -178,9 +179,39 @@ interface BlogPostPageProps {
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find(p => p.slug === params.slug);
-  
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  let post: any | undefined;
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (supabaseUrl && supabaseAnonKey) {
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    const { data, error } = await supabase
+      .from('blog_posts')
+      .select('*')
+      .eq('slug', params.slug)
+      .eq('status', 'published')
+      .maybeSingle();
+    if (!error && data) {
+      post = {
+        id: data.id,
+        title: data.title,
+        slug: data.slug,
+        excerpt: data.excerpt,
+        content: data.content,
+        author: data.author || 'Object Technologies Team',
+        publishedAt: data.published_at ? new Date(data.published_at).toLocaleDateString() : '',
+        category: data.category || 'General',
+        tags: Array.isArray(data.tags) ? data.tags : [],
+        image: '/api/placeholder/800/400',
+        readTime: data.read_time || 5,
+      };
+    }
+  }
+
+  if (!post) {
+    post = blogPosts.find(p => p.slug === params.slug);
+  }
+
   if (!post) {
     notFound();
   }
@@ -266,7 +297,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="mt-12 pt-8 border-t border-brand-gray-200">
             <h3 className="text-lg font-semibold text-brand-black mb-4">Tags</h3>
             <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
+              {post.tags.map((tag: string) => (
                 <span 
                   key={tag}
                   className="px-3 py-1 bg-brand-gray-100 text-brand-gray-600 rounded-full text-sm hover:bg-brand-orange/10 hover:text-brand-orange transition-colors cursor-pointer"

@@ -95,16 +95,17 @@ export default function Footer() {
               <div className="lg:text-right">
                 <p className="text-brand-gray-400 text-sm mb-4">Follow us on social media for updates and tips</p>
                 <div className="flex gap-4 lg:justify-end">
-                  <a href="#" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="Facebook">
+                  <a href="https://www.facebook.com/profile.php?id=61579215426826" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="Facebook">
                     <FontAwesomeIcon icon={faFacebook} />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="Instagram">
+                  <a href="https://www.instagram.com/object_technologies?igsh=MWh0ejZydzZzbHU3cA==
+" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="Instagram">
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/company/objecttechnologie/" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="LinkedIn">
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="X">
+                  <a href=" https://x.com/object_techno?t=-RDB3h03zqroaQFlUDlFuQ&s=09" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="X">
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
                   <a href="https://wa.me/2349138927374" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="WhatsApp">

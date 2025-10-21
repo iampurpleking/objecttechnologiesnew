@@ -1,6 +1,7 @@
 import './globals.css';
 import type { ReactNode } from 'react';
-import Navbar from './components/Navbar';
+import Navbar from '@/components/Navbar';
+import { AuthProvider } from '@/contexts/AuthContext';
 
 export const metadata = {
   title: 'Object Technologies - Digital Marketing & Software Innovation',
@@ -16,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -26,8 +27,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className="font-inter antialiased">
-        <Navbar />
-        {children}
+        <AuthProvider>
+          <Navbar />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
