@@ -1,13 +1,16 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AuthForm from "@/components/AuthForm";
 import { useSearchParams } from "next/navigation";
 
 export default function GetStartedPage() {
   const searchParams = useSearchParams();
-  const [mode, setMode] = useState<"login" | "register" | "reset-password">(
+  // Only initialize mode from searchParams once
+  const initialMode =
     (searchParams.get("mode") as "login" | "register" | "reset-password") ||
-      "login",
+    "login";
+  const [mode, setMode] = useState<"login" | "register" | "reset-password">(
+    initialMode,
   );
   const redirectTo = searchParams.get("redirectTo") || "/dashboard";
 

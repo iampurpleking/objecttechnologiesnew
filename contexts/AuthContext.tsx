@@ -2,8 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { User, AuthError } from "@supabase/supabase-js";
-import { createClient } from "@supabase/supabase-js";
-
+import { supabase } from "@/utils/supabaseClient";
 // Auth context type definition
 type AuthContextType = {
   user: User | null;
@@ -28,20 +27,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<AuthError | null>(null);
 
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-  );
-
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      setLoading(false);
-    });
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+      console.log("Session on mount:", session);
       setUser(session?.user ?? null);
       setLoading(false);
     });
@@ -56,21 +44,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         email,
         password,
       });
-
       if (error) {
         console.error("Sign in error:", error);
         setError(error);
-        return { error };
+        return { data: null, error };
       }
 
       console.log("Sign in successful:", data);
       // Let the session listener handle setting the user
-      return { error: null };
+      return { data, error: null };
     } catch (e) {
       console.error("Unexpected error during sign in:", e);
       const error = e as AuthError;
       setError(error);
-      return { error };
+      return { data: null, error };
     } finally {
       setLoading(false);
     }
