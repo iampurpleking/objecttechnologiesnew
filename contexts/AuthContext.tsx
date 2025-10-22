@@ -47,7 +47,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (error) {
         console.error("Sign in error:", error);
         setError(error);
-        return { data: null, error };
+        return { data, error };
       }
 
       console.log("Sign in successful:", data);
