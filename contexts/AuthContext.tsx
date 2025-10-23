@@ -11,11 +11,11 @@ type AuthContextType = {
   signIn: (
     email: string,
     password: string,
-  ) => Promise<{ error: AuthError | null }>;
+  ) => Promise<{ data: any; error: AuthError | null }>; // <-- FIXED
   signUp: (
     email: string,
     password: string,
-  ) => Promise<{ error: AuthError | null }>;
+  ) => Promise<{ data: any; error: AuthError | null }>; // <-- FIXED
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error: AuthError | null }>;
 };
@@ -28,8 +28,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [error, setError] = useState<AuthError | null>(null);
 
   useEffect(() => {
+    const { data: subscription } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        setUser(session?.user ?? null);
+        setLoading(false);
+      },
+    );
+
     supabase.auth.getSession().then(({ data: { session } }) => {
-      console.log("Session on mount:", session);
       setUser(session?.user ?? null);
       setLoading(false);
     });
@@ -72,19 +78,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           emailRedirectTo: `${window.location.origin}/auth/callback`,
         },
       });
-
       if (error) {
         console.error("Sign up error:", error);
         setError(error);
       } else {
         console.log("Sign up successful:", data);
       }
-      return { error };
+      return { data, error }; // <-- FIXED
     } catch (e) {
       console.error("Unexpected error during sign up:", e);
       const error = e as AuthError;
       setError(error);
-      return { error };
+      return { data: null, error }; // <-- FIXED
     }
   };
 
