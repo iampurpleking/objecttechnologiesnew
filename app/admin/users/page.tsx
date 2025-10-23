@@ -126,6 +126,8 @@ export default function UsersPage() {
                     <select
                       value={user.role}
                       onChange={(e) => handleRoleChange(user.id, e.target.value)}
+                      aria-label={`Role for ${user.email}`}
+                      title={`Role for ${user.email}`}
                       className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-brand-orange focus:border-brand-orange sm:text-sm"
                     >
                       <option value="user">User</option>

@@ -812,6 +812,7 @@ function ProjectManagement() {
                   />
                   <div className="flex gap-2 mb-2">
                     <select
+                      aria-label="Edit project status"
                       className="flex-1 px-3 py-2 border rounded"
                       value={editForm.status}
                       onChange={(e) =>
@@ -840,6 +841,9 @@ function ProjectManagement() {
                   <input
                     type="date"
                     className="w-full px-3 py-2 border rounded mb-4"
+                    title="Project deadline"
+                    placeholder="Select deadline"
+                    aria-label="Project deadline"
                     value={
                       editForm.deadline ? editForm.deadline.slice(0, 10) : ""
                     }
@@ -944,6 +948,8 @@ function ProjectManagement() {
               />
               <div className="flex gap-2 mb-2">
                 <select
+                  aria-label="Project status"
+                  title="Project status"
                   className="flex-1 px-3 py-2 border rounded"
                   value={form.status}
                   onChange={(e) => setForm({ ...form, status: e.target.value })}
@@ -967,6 +973,9 @@ function ProjectManagement() {
               <input
                 type="date"
                 className="w-full px-3 py-2 border rounded mb-4"
+                title="Project deadline"
+                placeholder="Select deadline"
+                aria-label="Project deadline"
                 value={form.deadline}
                 onChange={(e) => setForm({ ...form, deadline: e.target.value })}
               />
@@ -1278,6 +1287,7 @@ function BlogManagement() {
             >
               <input
                 className="w-full px-3 py-2 border rounded mb-2"
+                title="Post title"
                 placeholder="Title"
                 value={form.title}
                 onChange={(e) => setForm({ ...form, title: e.target.value })}
@@ -1285,6 +1295,7 @@ function BlogManagement() {
               />
               <input
                 className="w-full px-3 py-2 border rounded mb-2"
+                title="Author name"
                 placeholder="Author"
                 value={form.author}
                 onChange={(e) => setForm({ ...form, author: e.target.value })}
@@ -1320,6 +1331,8 @@ function BlogManagement() {
                     accept="image/*"
                     onChange={handleNewImageChange}
                     disabled={uploading}
+                    title="Upload featured image"
+                    aria-label="Upload featured image"
                   />
                   {uploading && (
                     <div className="text-sm text-brand-gray-500 mt-1">
@@ -1395,6 +1408,7 @@ function BlogManagement() {
             >
               <input
                 className="w-full px-3 py-2 border rounded mb-2"
+                title="Post title"
                 placeholder="Title"
                 value={editForm.title}
                 onChange={(e) =>
@@ -1404,6 +1418,7 @@ function BlogManagement() {
               />
               <input
                 className="w-full px-3 py-2 border rounded mb-2"
+                title="Author name"
                 placeholder="Author"
                 value={editForm.author}
                 onChange={(e) =>
@@ -1419,7 +1434,6 @@ function BlogManagement() {
                 }
               >
                 <option value="draft">Draft</option>
-                <option value="published">Published</option>
               </select>
               {editForm.image_url ? (
                 <div className="mb-2">
@@ -1443,6 +1457,8 @@ function BlogManagement() {
                     accept="image/*"
                     onChange={handleEditImageChange}
                     disabled={editUploading}
+                    title="Upload featured image"
+                    aria-label="Upload featured image"
                   />
                   {editUploading && (
                     <div className="text-sm text-brand-gray-500 mt-1">

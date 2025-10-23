@@ -174,9 +174,11 @@ export default function MyComponent() {
 ];
 
 interface BlogPostPageProps {
-  params: {
-    slug: string;
-  };
+  // Some Next.js PageProps typings expect `params` to be a Promise<any>.
+  // To satisfy that constraint while keeping `params.slug` available
+  // at call sites we type `params` as a value that is both a Promise
+  // and an object with the slug property.
+  params: Promise<{ slug: string }> & { slug: string };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {

@@ -115,6 +115,8 @@ export default function Navbar() {
           className="lg:hidden flex flex-col gap-1.5 p-2 group" 
           onClick={() => setOpen(!open)} 
           aria-label="Toggle menu"
+          aria-expanded={open ? 'true' : 'false'}
+          aria-controls="mobile-menu"
         >
           <span 
             className={`block w-6 h-0.5 bg-brand-gray-700 transition-all duration-300 ${
@@ -132,12 +134,11 @@ export default function Navbar() {
             }`}
           />
         </button>
-      </div>
-
       {/* Mobile Menu */}
-      <div 
-        role="menu"
-        aria-expanded={open}
+      <div
+        id="mobile-menu"
+        role="navigation"
+        aria-hidden={open ? 'false' : 'true'}
         className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
@@ -181,6 +182,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </nav>
   );
