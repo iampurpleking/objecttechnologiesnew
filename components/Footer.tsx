@@ -108,7 +108,7 @@ export default function Footer() {
                   <a href=" https://x.com/object_techno?t=-RDB3h03zqroaQFlUDlFuQ&s=09" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="X">
                     <FontAwesomeIcon icon={faTwitter} />
                   </a>
-                  <a href="https://wa.me/2349138927374" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="WhatsApp">
+                  <a href="https://wa.me/message/7AURUA4G6E65N1" className="w-10 h-10 bg-brand-gray-700 rounded-full flex items-center justify-center text-brand-gray-300 hover:bg-brand-orange hover:text-brand-white transition-all duration-300" aria-label="WhatsApp">
                     <FontAwesomeIcon icon={faWhatsapp} />
                   </a>
                 </div>
