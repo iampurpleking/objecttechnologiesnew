@@ -1,18 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AuthForm from "@/components/AuthForm";
-import { useSearchParams } from "next/navigation";
 
 export default function GetStartedPage() {
-  const searchParams = useSearchParams();
-  // Only initialize mode from searchParams once
-  const initialMode =
-    (searchParams.get("mode") as "login" | "register" | "reset-password") ||
-    "login";
+  // We read URL search params on the client inside an effect to avoid
+  // Next.js requiring a Suspense boundary for `useSearchParams()` during
+  // prerendering. Default values are provided for the first render.
   const [mode, setMode] = useState<"login" | "register" | "reset-password">(
-    initialMode,
+    "login",
   );
-  const redirectTo = searchParams.get("redirectTo") || "/dashboard";
+  const [redirectTo, setRedirectTo] = useState<string>("/dashboard");
+
+  useEffect(() => {
+    try {
+      const sp = new URLSearchParams(window.location.search);
+      const m = sp.get("mode") as "login" | "register" | "reset-password" | null;
+      if (m) setMode(m);
+      const r = sp.get("redirectTo");
+      if (r) setRedirectTo(r);
+    } catch (e) {
+      // ignore — keep defaults
+    }
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-brand-gray-50 px-4">
