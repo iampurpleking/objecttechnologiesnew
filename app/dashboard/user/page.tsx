@@ -4,14 +4,21 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
+import { supabase } from "@/utils/supabaseClient";
 
 export default function UserDashboard() {
   const router = useRouter();
   const { user, loading, signOut } = useAuth();
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.replace("/get-started");
+    const { error } = await supabase.auth.signOut();
+    if (!error) {
+      router.replace("/get-started");
+      router.refresh();
+    } else {
+      // Optionally handle error (e.g., show a message)
+      console.error("Sign out failed:", error.message);
+    }
   };
 
   useEffect(() => {
