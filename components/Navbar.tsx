@@ -56,9 +56,9 @@ export default function Navbar() {
         ? 'bg-brand-white/95 backdrop-blur-md shadow-lg border-b border-brand-orange/10' 
         : 'bg-brand-white border-b border-brand-orange/20'
     }`}>
-      <div className="container-max flex items-center justify-between py-4">
-        {/* Logo and Brand */}
-        <Link href="/" className="flex items-center gap-3 group" aria-label="Home">
+  <div className="container-max flex items-start lg:items-center justify-between py-4 relative">
+  {/* Logo and Brand */}
+  <Link href="/" className="flex items-center gap-3 group flex-shrink-0 self-start lg:self-center" aria-label="Home">
           <div className="relative">
             <img 
               src="/logo.svg" 
@@ -90,8 +90,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA Buttons */}
-        <div className="hidden md:flex items-center gap-4">
+  {/* CTA Buttons */}
+  <div className="flex items-center gap-4 pr-14 md:pr-0">
           {user ? (
             <Link 
               href="/dashboard" 
@@ -112,7 +112,7 @@ export default function Navbar() {
         {/* Mobile Menu Toggle */}
         <button 
           type="button"
-          className="lg:hidden flex flex-col gap-1.5 p-2 group" 
+          className="lg:hidden absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-1.5 p-2 group" 
           onClick={() => setOpen(!open)} 
           aria-label="Toggle menu"
           aria-expanded={open ? 'true' : 'false'}
@@ -134,7 +134,8 @@ export default function Navbar() {
             }`}
           />
         </button>
-      {/* Mobile Menu */}
+      </div>
+      {/* Mobile Menu (separate from the header container so it doesn't affect logo alignment) */}
       <div
         id="mobile-menu"
         role="navigation"
@@ -144,16 +145,12 @@ export default function Navbar() {
         }`}
       >
         <div className="bg-brand-white border-t border-brand-orange/10 px-4 pb-6">
-          <div className="flex flex-col gap-4 mt-4">
-            {/* Logo on mobile menu */}
-            <div className="flex items-center justify-center mb-2">
-              <img src="/logo.svg" alt="Logo" className="h-10 w-10 object-contain ml-2" />
-            </div>
+          <div className="flex flex-col gap-4 mt-4 items-center">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 href={link.href} 
-                className={`text-lg font-medium transition-colors py-2 ${
+                className={`w-full text-center text-lg font-medium transition-colors py-2 ${
                   isActive(link.href) ? 'text-brand-orange' : 'text-brand-gray-700 hover:text-brand-orange'
                 }`}
                 onClick={() => setOpen(false)}
@@ -161,28 +158,19 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="border-t border-brand-gray-200 pt-4 mt-2 space-y-3">
+            <div className="border-t border-brand-gray-200 pt-4 mt-2 space-y-3 w-full">
               {user ? (
                 <Link 
                   href="/dashboard" 
-                  className="block text-brand-gray-600 hover:text-brand-orange transition-colors font-medium"
+                  className="block text-center text-brand-gray-600 hover:text-brand-orange transition-colors font-medium"
                   onClick={() => setOpen(false)}
                 >
                   Dashboard
                 </Link>
-              ) : (
-                <Link 
-                  href="/get-started" 
-                  className="block btn-primary text-center"
-                  onClick={() => setOpen(false)}
-                >
-                  Get Started
-                </Link>
-              )}
+              ) : null}
             </div>
           </div>
         </div>
-      </div>
       </div>
     </nav>
   );

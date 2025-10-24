@@ -3,8 +3,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
+import StartProjectModal from '../components/StartProjectModal';
 
 export default function Home() {
   // Move FontAwesome imports inside the component to avoid SSR issues
@@ -14,6 +15,8 @@ export default function Home() {
   useEffect(() => {
     AOS.init({ once: true });
   }, []);
+
+  const [open, setOpen] = useState(false);
 
   return (
   <main className="min-h-screen bg-brand-white text-brand-black flex flex-col items-center justify-center p-0">
@@ -277,9 +280,9 @@ export default function Home() {
             Let's build your success story together. Join the growing list of businesses that trust Object Technologies.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="/login" className="btn-primary bg-brand-white text-brand-orange hover:bg-brand-gray-100">
+            <button id="open-start-project" onClick={() => setOpen(true)} className="btn-primary bg-brand-white text-brand-orange hover:bg-brand-gray-100">
               Start Your Project Today
-            </a>
+            </button>
             <a href="#services" className="btn-outline border-brand-white text-brand-white hover:bg-brand-white hover:text-brand-orange">
               Learn More About Our Services
             </a>
@@ -416,8 +419,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
+  {/* Modal for Start Project */}
+  <StartProjectModal open={open} onClose={() => setOpen(false)} />
+
+  {/* Footer */}
+  <Footer />
     </main>
   );
 }
