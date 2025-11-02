@@ -139,7 +139,9 @@ export default function Home() {
         data-aos-delay="100"
       >
         <div className="text-center mb-12">
-          <h2 className="text-section-title text-brand-orange">About Us</h2>
+          <h2 className="text-section-title text-brand-orange">
+            🤝 Meet Your Growth Partner: Object Technologies
+          </h2>
           <p className="text-section-subtitle">
             Your trusted partner in digital transformation
           </p>
@@ -152,11 +154,12 @@ export default function Home() {
                 Who We Are
               </h3>
               <p className="text-brand-gray-700 leading-relaxed">
-                Object Technologies is more than just a digital agency — we're a
-                growth partner for businesses that want to thrive in the modern
-                world. Based in Lagos, Nigeria, we specialize in website
-                development, digital marketing, branding, and software
-                solutions.
+                We're not just another agency; we're the strategic growth engine
+                your business needs. Based in Lagos, Nigeria, Object
+                Technologies exists for one purpose: to make your business
+                dominate the modern digital landscape. We combine deep local
+                insight with world-class expertise to deliver solutions that
+                don't just look good—they deliver measurable returns.
               </p>
             </div>
 
