@@ -67,7 +67,7 @@ export default function Home() {
               we deliver
               <span className="text-brand-orange font-semibold">
                 {" "}
-                cutting-edge digital marketing and and software products{" "}
+                cutting-edge digital marketing and software products{" "}
               </span>
               designed to make your business thrive.
             </p>
@@ -151,66 +151,104 @@ export default function Home() {
           <div className="space-y-6">
             <div className="card">
               <h3 className="text-xl font-bold text-brand-orange mb-3 font-poppins">
-                Who We Are
+                About Us: Transformation, Not Just Transactions
               </h3>
               <p className="text-brand-gray-700 leading-relaxed">
-                We're not just another agency; we're the strategic growth engine
-                your business needs. Based in Lagos, Nigeria, Object
-                Technologies exists for one purpose: to make your business
-                dominate the modern digital landscape. We combine deep local
-                insight with world-class expertise to deliver solutions that
-                don't just look good—they deliver measurable returns.
-              </p>
+                We know you need more than just a vendor—you need a strategic
+                partner dedicated to your bottom line. <br />
+                Object Technologies is that partner. We fuse local market savvy
+                with world-class digital expertise to build businesses that
+                don't just survive, they dominate. We specialize in high-impact
+                solutions across:
+              </p>{" "}
+              <br />
+              <ul className="space-y-2 text-brand-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-orange mt-1">•</span>
+                  <span>Conversion-Focused Website Development</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-orange mt-1">•</span>
+                  <span>Results-Driven Digital Marketing</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-orange mt-1">•</span>
+                  <span>Magnetic Branding & Identity</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-orange mt-1">•</span>
+                  <span>Bespoke Software Solutions</span>
+                </li>
+              </ul>
             </div>
 
             <div className="card">
               <h3 className="text-xl font-bold text-brand-orange mb-3 font-poppins">
-                Our Mission
+                Our Mission: Engineered for Your Success
               </h3>
               <p className="text-brand-gray-700 leading-relaxed">
-                To empower businesses with digital tools and strategies that
-                drive measurable growth. We create systems that help your brand
-                attract the right audience, build trust, and convert leads into
-                loyal customers.
+                Our purpose is simple: To empower your business with digital
+                tools and strategies that guarantee measurable growth. We don't
+                guess; we create systems designed to:
               </p>
+              <ul className="list-disc pl-6 space-y-2 text-brand-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-orange mt-1">•</span>
+                  <span>Attract the exact audience you need.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-orange mt-1">•</span>
+                  <span>Build unbreakable trust in your brand.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-orange mt-1">•</span>
+                  <span>Convert leads into high-value, loyal customers.</span>
+                </li>
+              </ul>
             </div>
           </div>
 
           <div className="space-y-6">
             <div className="card">
               <h3 className="text-xl font-bold text-brand-orange mb-3 font-poppins">
-                Our Vision
+                The Future We're Building
               </h3>
               <p className="text-brand-gray-700 leading-relaxed">
-                To become Africa's leading digital solutions hub, setting the
-                standard for innovation and excellence in website development,
-                digital marketing, and software technology.
+                We're on a path to become Africa's leading digital solutions
+                hub, setting the absolute standard for innovation and
+                excellence. When you partner with us, you're not just buying a
+                service; you're investing in a team committed to pioneering the
+                future of business technology.
               </p>
+              ``
             </div>
 
             <div className="card">
               <h3 className="text-xl font-bold text-brand-orange mb-3 font-poppins">
-                Our Values
+                The Principles That Drive Your Results
               </h3>
+              <p>We operate on a foundation of trust and performance:</p>
               <ul className="space-y-2 text-brand-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-brand-orange mt-1">•</span>
                   <span>
-                    <strong>Innovation</strong> – Constant creativity and
-                    forward thinking
+                    <strong>Innovation</strong> – We deliver cutting-edge
+                    solutions by prioritizing constant creativity and forward
+                    thinking.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-brand-orange mt-1">•</span>
                   <span>
-                    <strong>Integrity</strong> – Honesty and transparency in
-                    every relationship
+                    <strong>Integrity</strong> – We ensure honesty and
+                    transparency in every relationship—your trust is paramount.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-brand-orange mt-1">•</span>
                   <span>
-                    <strong>Growth</strong> – Your success is our success
+                    <strong>Growth</strong> – our success is the only metric
+                    that matters. <strong>Your growth is our success.</strong>
                   </span>
                 </li>
               </ul>
