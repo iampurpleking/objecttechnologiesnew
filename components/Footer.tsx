@@ -22,16 +22,16 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-brand-gray-300 mb-6 leading-relaxed max-w-md">
-                Empowering businesses across Africa with cutting-edge digital marketing solutions and 
+                Empowering businesses across Africa with cutting-edge digital marketing solutions and
                 software development services. Your growth is our mission.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-brand-gray-300">
                   <span className="text-brand-orange w-4">📧</span>
                   <a href="mailto:help.objecttechnologies@gmail.com" className="hover:text-brand-orange transition-colors">
-                    help.objecttechnologies@gmail.com
+                    info@objecttecnologies.app
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-brand-gray-300">
@@ -42,7 +42,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-start gap-3 text-brand-gray-300">
                   <span className="text-brand-orange w-4 mt-1">📍</span>
-                  <span>12, Adewole Okediran Street, Iba New Site, Ojo, Lagos, Nigeria</span>
+                  <span>12, Adewole Okediran Street, Ojo, Lagos, Nigeria</span>
                 </div>
               </div>
             </div>
@@ -83,15 +83,15 @@ export default function Footer() {
                   Let's discuss your project and see how we can help your business grow.
                 </p>
                 <div className="flex gap-4">
-                  <Link href="/login" className="btn-primary">
+                  <Link href="#contact" className="btn-primary">
                     Start Your Project
                   </Link>
-                  <a href="mailto:help.objecttechnologies@gmail.com" className="btn-outline border-brand-gray-600 text-brand-gray-300 hover:border-brand-orange hover:text-brand-orange">
+                  <a href="mailto:info@objecttecnologies.app" className="btn-outline border-brand-gray-600 text-brand-gray-300 hover:border-brand-orange hover:text-brand-orange">
                     Send Email
                   </a>
                 </div>
               </div>
-              
+
               <div className="lg:text-right">
                 <p className="text-brand-gray-400 text-sm mb-4">Follow us on social media for updates and tips</p>
                 <div className="flex gap-4 lg:justify-end">
